@@ -1,0 +1,22 @@
+//defining the pin for magnet
+int magPin = 2;
+int buzPin = 3;
+
+//setting up the pins and serial
+void setup() {
+  Serial.begin(9600);
+  pinMode(magPin, INPUT_PULLUP);
+  pinMode(buzPin, OUTPUT);
+}
+void loop() {
+  int inputState = digitalRead(2);
+  if (inputState == HIGH)
+  {
+    digitalWrite(buzPin, LOW);
+  }
+  else {
+    Serial.println("door is open");
+    digitalWrite(buzPin, HIGH);
+  }
+  delay(1000);
+}

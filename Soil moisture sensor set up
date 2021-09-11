@@ -1,0 +1,24 @@
+int sensor_pin =5;
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(led_pin, OUTPUT);
+
+  pinMode(sensor_pin, INPUT);
+
+}
+
+void loop() {
+
+  if(digitalRead(sensor_pin) == HIGH){
+
+   Serial.println("threshold got triggered");
+
+  } else {
+    Serial.println("everything is normal");
+    delay(1000);
+
+  }
+
+}

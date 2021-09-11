@@ -1,0 +1,18 @@
+int relay_pin = 2;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(relay_pin, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(relay_pin, HIGH);   // turn the Relay on (HIGH is the voltage level)
+  delay(10000);                       // wait for 10 second
+  digitalWrite(relay_pin, LOW);    // turn the Relay off by making the voltage LOW
+  delay(10000);                       // wait for 10 second
+}
+
+
+
